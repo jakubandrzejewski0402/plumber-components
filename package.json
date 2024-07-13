@@ -1,8 +1,8 @@
 {
   "name": "plumber-components",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A React components library using Material Ui components.",
-  "main": "dist/index.d.ts",
+  "main": "dist/bundle.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
