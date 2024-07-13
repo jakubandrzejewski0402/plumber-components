@@ -1,1 +1,1 @@
-export { default as MyButton } from './components/PrimaryButton';
+export { default as PrimaryButton } from './components/PrimaryButton';
