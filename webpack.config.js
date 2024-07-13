@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'production', // Dodaj tę linię
-  entry: './src/index.ts',
+  mode: 'production',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
