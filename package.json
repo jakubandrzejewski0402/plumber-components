@@ -1,6 +1,6 @@
 {
   "name": "plumber-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React components library using Material Ui components.",
   "main": "index.js",
   "scripts": {
