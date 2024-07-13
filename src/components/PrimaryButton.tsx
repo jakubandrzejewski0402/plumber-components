@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 
-interface PrimaryButtonProps {
+export interface PrimaryButtonProps {
   text: string;
   onClick: () => void;
 }
