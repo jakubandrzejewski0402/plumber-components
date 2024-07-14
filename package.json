@@ -1,6 +1,6 @@
 {
   "name": "plumber-components",
-  "version": "1.2.11",
+  "version": "1.2.13",
   "description": "A React components library using Material Ui components.",
   "keywords": [],
   "author": "",
@@ -8,6 +8,9 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts", 
+  "files": [
+    "dist/**/*" 
+  ],
   "scripts": {
     "test": "jest",
     "build": "rollup -c --bundleConfigAsCjs",
