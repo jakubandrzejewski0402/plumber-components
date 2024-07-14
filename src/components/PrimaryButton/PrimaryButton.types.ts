@@ -1,4 +1,4 @@
 export interface PrimaryButtonProps {
-    children?: string;
-    onClick?: () => void;
-  }
+  children?: string;
+  onClick?: () => void;
+}
