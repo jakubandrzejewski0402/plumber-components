@@ -8,6 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -15,8 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "types": ["node", "@testing-library/jest-dom", "jest"],
-    "declaration": true,
-    "outDir": "./dist",
   },
-    "include": ["src/**/*"] 
+  "include": ["src"]
 }

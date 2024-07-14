@@ -1,9 +1,5 @@
 import Button from '@mui/material/Button';
-
-export interface PrimaryButtonProps {
-  children?: string;
-  onClick?: () => void;
-}
+import { PrimaryButtonProps } from './PrimaryButton.types';
 
 const PrimaryButton: React.FC<PrimaryButtonProps> = ({ children, onClick }) => {
   return (

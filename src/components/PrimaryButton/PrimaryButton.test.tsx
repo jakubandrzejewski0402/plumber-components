@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import PrimaryButton, { type PrimaryButtonProps } from '../PrimaryButton';
+import PrimaryButton from './PrimaryButton';
+import type {PrimaryButtonProps } from 'plumber-components';
 
 const renderComponent = ({ children, ...props }: PrimaryButtonProps) => {
   render(<PrimaryButton {...props}>{children}</PrimaryButton>);
