@@ -5,7 +5,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import json from '@rollup/plugin-json';
 import replace from '@rollup/plugin-replace';
-
+import typescript from 'rollup-plugin-typescript2'; 
 const packageJson = require('./package.json');
 
 export default {
@@ -28,6 +28,10 @@ export default {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
     }),
     commonjs(),
+    typescript({
+      tsconfig: './tsconfig.json', 
+      declaration: true, 
+    }),
     babel({
       babelHelpers: 'runtime',
       exclude: 'node_modules/**',
