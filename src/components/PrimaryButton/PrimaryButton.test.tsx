@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import PrimaryButton from './PrimaryButton';
-import type { PrimaryButtonProps } from 'plumber-components';
+import type { PrimaryButtonProps } from './PrimaryButton.types';
 
 const renderComponent = ({ children, ...props }: PrimaryButtonProps) => {
   render(<PrimaryButton {...props}>{children}</PrimaryButton>);
@@ -19,7 +19,7 @@ describe('PrimaryButton', () => {
     const handleClick = jest.fn();
     renderComponent({ children: 'Click Me', onClick: handleClick });
 
-    const buttonElement = screen.getByText(/click me/i);
+    const buttonElement = screen.getByText('Click Me');
     fireEvent.click(buttonElement);
 
     expect(handleClick).toHaveBeenCalledTimes(1);
