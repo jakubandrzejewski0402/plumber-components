@@ -16,6 +16,7 @@ const gradientButton = ({ ownerState }: any) => ({
 
 const themeOptions: ThemeOptions = {
   palette: {
+    mode: 'dark',
     primary: {
       main: '#209194',
     },
