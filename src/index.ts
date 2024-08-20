@@ -55,12 +55,14 @@ export {
   FormLabel,
   FormControlLabel,
   FormGroup,
+  FormHelperText,
 } from '@mui/material';
 export type {
   FormControlProps,
   FormLabelProps,
   FormControlLabelProps,
   FormGroupProps,
+  FormHelperTextProps,
 } from '@mui/material';
 
 export {
@@ -79,3 +81,9 @@ export type {
   ListItemButtonProps,
   ListItemTextProps,
 } from '@mui/material';
+
+export { CircularProgress } from '@mui/material';
+export type { CircularProgressProps } from '@mui/material';
+
+export { Menu, MenuItem } from '@mui/material';
+export type { MenuProps, MenuItemProps } from '@mui/material';
