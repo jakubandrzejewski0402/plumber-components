@@ -84,8 +84,8 @@ export type {
   ListItemTextProps,
 } from '@mui/material';
 
-export { CircularProgress } from '@mui/material';
-export type { CircularProgressProps } from '@mui/material';
+export { CircularProgress, Skeleton } from '@mui/material';
+export type { CircularProgressProps, SkeletonProps } from '@mui/material';
 
 export { Menu, MenuItem } from '@mui/material';
 export type { MenuProps, MenuItemProps } from '@mui/material';
