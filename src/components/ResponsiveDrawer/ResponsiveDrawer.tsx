@@ -1,37 +1,28 @@
-import {
-  CSSObject,
-  Drawer,
-  Box,
-  Stack,
-  IconButton,
-  useTheme,
-} from '@mui/material';
+import { Drawer, Box, Stack, IconButton, useTheme } from '@mui/material';
 import { forwardRef, useState } from 'react';
 import { ResponsiveDrawerProps } from './ResponsiveDrawer.types';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
 const ResponsiveDrawer = forwardRef<HTMLDivElement, ResponsiveDrawerProps>(
-  ({ width, ...props }, ref) => {
+  ({ width, children, sx, PaperProps, ...props }, ref) => {
     const [open, setOpen] = useState(true);
     const theme = useTheme();
 
     const handleToggle = () => setOpen((prev) => !prev);
 
-    const openedMixin = (): CSSObject => ({
+    const openedMixin = () => ({
       width,
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.enteringScreen,
       }),
-      overflowX: 'hidden',
     });
 
-    const closedMixin = (): CSSObject => ({
+    const closedMixin = () => ({
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
-      overflowX: 'hidden',
       width: 0,
       [theme.breakpoints.up('sm')]: {
         width: 0,
@@ -39,33 +30,35 @@ const ResponsiveDrawer = forwardRef<HTMLDivElement, ResponsiveDrawerProps>(
     });
 
     return (
-      <Box position="relative">
-        <Drawer
-          open={open}
-          ref={ref}
-          sx={{
-            flexShrink: 0,
-            whiteSpace: 'nowrap',
-            boxSizing: 'border-box',
-            ...(open && {
-              ...openedMixin(),
-              '& .MuiDrawer-paper': openedMixin(),
-            }),
-            ...(!open && {
-              ...closedMixin(),
-              '& .MuiDrawer-paper': closedMixin(),
-            }),
-          }}
-          {...props}
-        />
+      <Drawer
+        open={open}
+        ref={ref}
+        {...props}
+        sx={{
+          position: 'relative',
+          flexShrink: 0,
+          whiteSpace: 'nowrap',
+          boxSizing: 'border-box',
+          ...(open && {
+            ...openedMixin(),
+            '& .MuiDrawer-paper': openedMixin(),
+          }),
+          ...(!open && {
+            ...closedMixin(),
+            '& .MuiDrawer-paper': closedMixin(),
+          }),
+          ...sx,
+        }}
+        PaperProps={{ sx: { overflowY: 'visible' }, ...PaperProps }}
+      >
         <Stack
           position="absolute"
           borderRadius="0 50% 50% 0"
-          borderColor="inherit"
+          borderColor="divider"
           borderRight={1}
           borderBottom={1}
           borderTop={1}
-          right={-40}
+          right={-41}
           top="50%"
           sx={{
             transform: 'translateY(-50%)',
@@ -80,7 +73,10 @@ const ResponsiveDrawer = forwardRef<HTMLDivElement, ResponsiveDrawerProps>(
             {open ? <ChevronLeft /> : <ChevronRight />}
           </IconButton>
         </Stack>
-      </Box>
+        <Box width="100%" height="100%" sx={{ overflowX: 'hidden' }}>
+          {children}
+        </Box>
+      </Drawer>
     );
   },
 );
