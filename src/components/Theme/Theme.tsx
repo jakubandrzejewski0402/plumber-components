@@ -1,6 +1,7 @@
 import { createTheme, ThemeOptions, ThemeProvider } from '@mui/material/styles';
 import { ThemeProps } from './Theme.types';
 import { CssBaseline } from '@mui/material';
+import '@fontsource/montserrat';
 
 const gradientButton = ({ ownerState }: any) => ({
   ...(ownerState.variant === 'contained' && {
@@ -32,7 +33,7 @@ const themeOptions: ThemeOptions = {
     },
   },
   typography: {
-    fontFamily: 'Poppins',
+    fontFamily: ['Montserrat', 'sans-serif'].join(','),
     allVariants: {
       color: '#eaebe6',
     },
