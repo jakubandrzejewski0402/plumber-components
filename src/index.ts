@@ -6,7 +6,6 @@ export type { ResponsiveDrawerProps } from './components/ResponsiveDrawer/Respon
 
 export { default as Icons } from './components/Icons';
 export { default as GenesisIcon } from './components/GenesisIcon/GenesisIcon';
-export { default as AWSIcon } from './components/SectionIcons/AWSIcon/AWSIcon';
 export { default as Theme } from './components/Theme/Theme';
 
 export { AppBar, Toolbar } from '@mui/material';
