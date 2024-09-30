@@ -44,11 +44,12 @@ export type {
   DialogActionsProps,
 } from '@mui/material';
 
-export { IconButton, TextField, Checkbox } from '@mui/material';
+export { IconButton, TextField, Checkbox, Switch } from '@mui/material';
 export type {
   IconButtonProps,
   TextFieldProps,
   CheckboxProps,
+  SwitchProps,
 } from '@mui/material';
 
 export {
@@ -83,8 +84,12 @@ export type {
   ListItemTextProps,
 } from '@mui/material';
 
-export { CircularProgress, Skeleton } from '@mui/material';
-export type { CircularProgressProps, SkeletonProps } from '@mui/material';
+export { CircularProgress, LinearProgress, Skeleton } from '@mui/material';
+export type {
+  CircularProgressProps,
+  LinearProgressProps,
+  SkeletonProps,
+} from '@mui/material';
 
 export { Menu, MenuItem } from '@mui/material';
 export type { MenuProps, MenuItemProps } from '@mui/material';
