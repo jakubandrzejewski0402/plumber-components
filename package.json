@@ -1,6 +1,6 @@
 {
   "name": "plumber-components",
-  "version": "1.4.10",
+  "version": "1.4.11",
   "description": "A React components library using Material Ui components.",
   "keywords": [],
   "author": "",
@@ -29,6 +29,8 @@
     "@fontsource/montserrat": "^5.1.0",
     "@mui/icons-material": "^5.16.1",
     "@mui/material": "^5.16.5",
+    "@uiw/react-json-view": "^1.12.2",
+    "mui-color-input": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
