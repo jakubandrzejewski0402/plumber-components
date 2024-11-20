@@ -4,9 +4,18 @@ export type { PrimaryButtonProps } from './components/PrimaryButton/PrimaryButto
 export { default as ResponsiveDrawer } from './components/ResponsiveDrawer/ResponsiveDrawer';
 export type { ResponsiveDrawerProps } from './components/ResponsiveDrawer/ResponsiveDrawer.types';
 
-export { default as Icons } from './components/Icons';
+export { default as JsonViewer } from './components/JsonViewer/JsonViewer';
+export type { JsonViewerProps } from './components/JsonViewer/JsonViewer.types';
+
 export { default as GenesisIcon } from './components/GenesisIcon/GenesisIcon';
+export type {
+  GenesisIconProps,
+  GenesisIconType,
+} from './components/GenesisIcon/GensisIcon.types';
+
+export { default as Icons } from './components/Icons';
 export { default as Theme } from './components/Theme/Theme';
+export { useTheme } from '@mui/material';
 
 export { AppBar, Toolbar } from '@mui/material';
 
