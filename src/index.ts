@@ -8,8 +8,8 @@ export { default as JsonViewer } from './components/JsonViewer/JsonViewer';
 export type { JsonViewerProps } from './components/JsonViewer/JsonViewer.types';
 
 export { default as GenesisIcon } from './components/GenesisIcon/GenesisIcon';
-export type {
-  GenesisIconProps,
+export {
+  type GenesisIconProps,
   GenesisIconType,
 } from './components/GenesisIcon/GensisIcon.types';
 
